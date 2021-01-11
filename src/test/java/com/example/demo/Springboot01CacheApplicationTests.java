@@ -176,6 +176,7 @@ public class Springboot01CacheApplicationTests {
         results.forEach(System.out::println);
         for(int i=0;i<100;i++){
             System.out.println(i);
+            System.out.println(i);
         }
     }
 }
