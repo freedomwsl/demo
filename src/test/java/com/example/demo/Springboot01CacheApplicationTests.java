@@ -163,8 +163,8 @@ public class Springboot01CacheApplicationTests {
             Distance distance1 = result.getDistance();
             double value = distance1.getValue();
             System.out.println(value);
-
         }
+
 
 
 
@@ -174,7 +174,8 @@ public class Springboot01CacheApplicationTests {
     public void testGeoHash() {
         List<String> results = redisTemplate.opsForGeo().hash(cityGeoKey, "北京", "上海", "深圳");
         results.forEach(System.out::println);
-
-
+        for(int i=0;i<100;i++){
+            System.out.println(i);
+        }
     }
 }
