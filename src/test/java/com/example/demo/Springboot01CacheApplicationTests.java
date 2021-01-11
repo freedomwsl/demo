@@ -149,7 +149,6 @@ public class Springboot01CacheApplicationTests {
                 .includeDistance().includeCoordinates().sortAscending().limit(5);
         GeoResults<RedisGeoCommands.GeoLocation<String>> results = redisTemplate.opsForGeo().radius(cityGeoKey, circle,args);
         results.forEach(System.out::println);
-
     }
 
     @Test
