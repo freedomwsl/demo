@@ -180,7 +180,8 @@ public class Springboot01CacheApplicationTests {
             System.out.println(i);
             System.out.println(i);
             System.out.println(i);
-            System.out.println(i);
+
+
 
         }
     }
