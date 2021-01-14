@@ -126,7 +126,7 @@ public class Springboot01CacheApplicationTests {
 
     @Test
     public void testAdd() {
-        Long addedNum = redisTemplate.opsForGeo().add(cityGeoKey, new Point(113.557952,34.833286), "工大门口8");
+        Long addedNum = redisTemplate.opsForGeo().add(cityGeoKey, new Point(113.558143,34.835406), "bikeId:123");
         System.out.println(addedNum);
     }
     @Test
@@ -146,7 +146,7 @@ public class Springboot01CacheApplicationTests {
         //longitude,latitude
         Circle circle = new Circle(116.405285, 39.904989, Metrics.KILOMETERS.getMultiplier());
         RedisGeoCommands.GeoRadiusCommandArgs args = RedisGeoCommands.GeoRadiusCommandArgs.newGeoRadiusArgs()
-                .includeDistance().includeCoordinates().sortAscending().limit(5);
+                .includeDistance().includeCoordinates().sortAscending();
         GeoResults<RedisGeoCommands.GeoLocation<String>> results = redisTemplate.opsForGeo().radius(cityGeoKey, circle,args);
         results.forEach(System.out::println);
     }
@@ -179,7 +179,7 @@ public class Springboot01CacheApplicationTests {
             System.out.println(i);
             System.out.println(i);
             System.out.println(i);
-            System.out.println(i);
+
         }
     }
 }
